@@ -1,0 +1,16 @@
+{
+  "name": "lessons",
+  "version": "1.0.0",
+  "main": "asyncWriteFile.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "loadash": "^1.0.0",
+    "nodemon": "^3.1.11"
+  }
+}
