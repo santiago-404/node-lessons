@@ -3,14 +3,22 @@
   "version": "1.0.0",
   "main": "asyncWriteFile.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santiago-404/node-lessons.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santiago-404/node-lessons/issues"
+  },
+  "homepage": "https://github.com/santiago-404/node-lessons#readme",
   "description": "",
-  "dependencies": {
-    "loadash": "^1.0.0",
+  "devDependencies": {
     "nodemon": "^3.1.11"
   }
 }
