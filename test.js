@@ -1,29 +1,18 @@
-const {readFile, writeFile} = require('fs')
+//read two files
+//then write those data into a new file
 
-let words;
+const {readFile, writeFile} = require('fs').promises
 
-readFile('./text.txt', 'utf-8', 
-  (err, data) => {
-    if(err){
-      console.log(err)
-      return
-    }
-    words = data;
-    console.log(data);
-    
-      
-    writeFile('./copy-text.txt', words, (err) => {
-      if(err){
-        return console.log(err)
-      }
-      readFile('./copy-text.txt', 'utf-8', 
-        (err, data) => {
-          if(err){
-            return console.log(err)
-          }
-          console.log(data);
-          return
-      })
-    })
+const start = async () => {
+  try {
+    const first = await readFile('./content/1-text.txt', 'utf-8')
+    const second = await readFile('./content/2-text.txt', 'utf-8')
 
-})
+    writeFile('./content/3-text.txt', `Made with promises, first: ${first}, second: ${second}`, {flag: 'a'})
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+start()
+console.log(1)

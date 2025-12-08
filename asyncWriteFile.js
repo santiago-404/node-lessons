@@ -1,10 +1,6 @@
 
 const {readFile, writeFile} = require('fs');
 
-
-
-
-
 const promise = new Promise((resolve, reject) => {
   readFile('./text.txt', 'utf-8', (err, data) => {
     if(err){
